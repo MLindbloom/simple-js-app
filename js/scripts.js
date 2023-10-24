@@ -1,6 +1,5 @@
-let pokemonList = [];
-
-pokemonList = [
+let pokemonRepository = (function () {
+    let pokemonList = [
     {
         name: 'Pikachu',
         height: 0.4, //meters
@@ -19,7 +18,23 @@ pokemonList = [
         type: ['Psychic'],
         species: 'New Species'
     }
-]
+];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    function getAll () {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    };
+})();
+
+
 
 // for (let i = 0; i < pokemonList.length; i++) {
 //     if (pokemonList[i].height > 1.0)
@@ -28,7 +43,9 @@ pokemonList = [
 //   document.write(pokemonList[i].name + "  " + "(height: " + "  " +  pokemonList[i].height + ") " + "<br>");}
 //   }
 
-pokemonList.forEach(function(pokemon) {
+// pokemonList.forEach(function(pokemon) {
+
+pokemonRepository.getAll().forEach(function(pokemon){
     if (pokemon.height > 1.0) {
         document.write(pokemon.name + '  ' + '(height:' + '  ' + pokemon.height + 'm) ' + '- Wow, that\'s big!' + '<br>'); //if pokemon's height is over 1.0m print "Wow, that's big!"
     }
