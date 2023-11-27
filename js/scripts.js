@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
         });
     };
    
-    function loadList() {
+    function loadList(pokemon) {
         return fetch(apiUrl).then(function (response)
 {
             return response.json();
