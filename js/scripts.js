@@ -72,6 +72,11 @@ let pokemonRepository = (function () {
     }
 
     //Modal
+    function hideModal() {
+        let modal = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+    }
+
     function showModal(pokemon) {
         let modalContainer = document.querySelector('#modal-container');
 
@@ -104,10 +109,7 @@ let pokemonRepository = (function () {
     modalContainer.appendChild(modal);
     modalContainer.classList.add('is-visible');
 
-    function hideModal() {
-        let modal = document.querySelector('#modal-container');
-        modalContainer.classList.remove('is-visible');
-    }
+
 
     if (dialogPromiseReject) {
         dialogPromiseReject();
