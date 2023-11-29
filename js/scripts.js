@@ -92,7 +92,7 @@ let pokemonRepository = (function () {
 
     let imageElement = document.createElement('img');
     imageElement.classList.add('modal-img');
-    imageElement.src = pokemon.imageURL;
+    imageElement.src = pokemon.imageUrl;
 
     let contentElement = document.createElement('p');
     contentElement.innerText = 'height: ' + pokemon.height;
@@ -103,6 +103,16 @@ let pokemonRepository = (function () {
     modal.appendChild(contentElement);
     modalContainer.appendChild(modal);
     modalContainer.classList.add('is-visible');
+
+    function hideModal() {
+        let modal = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+    }
+
+    if (dialogPromiseReject) {
+        dialogPromiseReject();
+        dialogPromiseReject = null;
+    }
 
     modalContainer.addEventListener('click', (e) => {
         let target =e.target;
