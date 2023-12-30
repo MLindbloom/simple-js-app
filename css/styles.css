@@ -1,96 +1,67 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #fff;
+  background-color: #6CABDD;
+  color: #fff;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  color: #000;
+  min-height: 100vh;
   text-align: center;
+  margin-top: 35px;
+}
+
+.container{
+  margin-top: 4rem;
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-ul {
-  list-style-type: none;
-  text-align: center;
+.list-group-item {
+  background-color: #fff;
 }
 
 .button-class {
-    display: inline-block;
-    background-color: #6CABDD;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: transform 0.3s ease;
-  }
-
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  
-  /* to show it above other content */
-  z-index: 999; 
-  
-  /* to allow scrolling if the screen is not high enough*/
-  overflow: auto; 
-  
-  /* this is used to center the modal */
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: center;
-}
-
-.modal-close {
-  float: right;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.modal h1 {
-  margin-top: 0;
-}
-
-.modal p {
-  margin-bottom: 0;
+  background-color: #FFC659;
+  color: #000;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-weight: 700;
-  font-size: 24px;
 }
 
+.button-class:hover,
+.button-class:focus {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.button-class:active,
+.button-class:active {
+  background-color: #fff;
+  border: 5px solid #FFC659;
+  color: #000;
+}
+
+.modal-body {
+  color: #fff;
+}
+.modal-title {
+  margin-top: 10%;
+}
 .modal-img {
-  width: 150px;
-  height: 150px;
-  margin-left: 36px;
-  margin-top: -24px;
+  padding: 20px;
+  margin-top: -20px;
+  width: 50%;
+}
+
+
+@media all and (max-width: 768px) {
+  .button-class {
+      padding-top: 26px;
+      padding-bottom: 26px;
+  }
 }
