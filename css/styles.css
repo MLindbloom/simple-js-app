@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #6CABDD;
   color: #fff;
@@ -47,11 +48,14 @@ h1 {
 }
 
 .modal-body {
-  color: #fff;
+  color: black;
 }
+
 .modal-title {
   margin-top: 10%;
+  color: black;
 }
+
 .modal-img {
   padding: 20px;
   margin-top: -20px;

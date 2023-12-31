@@ -16,11 +16,12 @@ let pokemonRepository = (function () {
         function addListItem(pokemon) {
             let element = document.querySelector('.pokemon-list');
             let listItem = document.createElement('li');
+            listItem.classList.add('list-group-item');
             let button = document.createElement('button');
             button.innerText = pokemon.name;
             listItem.classList.add('list-group-item');
             button.setAttribute('data-toggle', 'modal');
-            button.setAttribute('data-target', '#modal');
+            button.setAttribute('data-target', '#exampleModal');
             button.classList.add('btn', 'btn-primary');
             button.classList.add('button-class')
             listItem.append(button);
@@ -51,8 +52,8 @@ let pokemonRepository = (function () {
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
-            item.imageUrl = details.sprites.back_default;
+            item.imageUrlFront = details.sprites.front_default;
+            item.imageUrlBack = details.sprites.back_default;
             item.height = details.height;
             item.types = details.types;
         }).catch(function (e) {
@@ -70,24 +71,24 @@ let pokemonRepository = (function () {
     function showModal(pokemon) {
         let modalBody = $(".modal-body");
         let modalTitle = $(".modal-title");
-        let modalHeader = $(".modal-header");
         let titleElement = document.createElement("h1");
         titleElement.innerText = "Pokemon name" + ": " + pokemon.name;
         let contentElement = document.createElement("p");
         contentElement.innerText = "Pokemon height" + ": " + pokemon.height;
-        let myImage = document.createElement("img");
-        myImage.src = pokemon.imageUrl;
+        let myImageFront = document.createElement("img");
+        let myImageBack = document.createElement("img");
+        myImageFront.src = pokemon.imageUrlFront;
+        myImageBack.src = pokemon.imageUrlBack;
         $("#modal").click(function () {
           $(button).toggle("modal");
         });
 
         modalTitle.empty();
         modalBody.empty();
- 
-    modalTitle.append(nameElement);
-    modalBody.append(imageElementFront);
-    modalBody.append(imageElementBack);
-    modalBody.append(heightElement);
+        modalTitle.append(titleElement);
+        modalBody.append(contentElement);
+        modalBody.append(myImageFront);
+        modalBody.append(myImageBack);
 
 }
 
