@@ -47,21 +47,13 @@ h1 {
   color: #000;
 }
 
+.modal-title {
+  color: black;
+}
+
 .modal-body {
   color: black;
 }
-
-.modal-title {
-  margin-top: 10%;
-  color: black;
-}
-
-.modal-img {
-  padding: 20px;
-  margin-top: -20px;
-  width: 50%;
-}
-
 
 @media all and (max-width: 768px) {
   .button-class {
