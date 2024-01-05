@@ -1,0 +1,50 @@
+.button-class:active,
+.list-group-item {
+  background-color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #6cabdd;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  text-align: center;
+  margin-top: 35px;
+}
+.container {
+  margin-top: 4rem;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+.button-class {
+  background-color: #ffc659;
+  color: #000;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-weight: 700;
+}
+.button-class:focus,
+.button-class:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.button-class:active {
+  border: 5px solid #ffc659;
+  color: #000;
+}
+.modal-body,
+.modal-title {
+  color: #000;
+}
+@media all and (max-width: 768px) {
+  .button-class {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
