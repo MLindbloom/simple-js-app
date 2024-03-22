@@ -10,7 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link href="dist/stylesmin.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
@@ -38,9 +38,17 @@
     </nav>
     <div class="container">
       <h1 class="display-4">Pokémon</h1>
-      <ul class="pokemon-list">
-        <div class="row"></div>
-      </ul>
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="pokemon-list"></ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="pokemon-list"></ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="pokemon-list"></ul>
+        </div>
+      </div>
     </div>
     <div
       class="modal fade"
@@ -93,9 +101,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="dist/scriptsmin.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
