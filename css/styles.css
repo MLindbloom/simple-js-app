@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #6cabdd;
+  background-color: #6CABDD;
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -14,7 +14,7 @@ body {
   margin-top: 35px;
 }
 
-.container {
+.container{
   margin-top: 4rem;
 }
 
@@ -27,7 +27,7 @@ h1 {
 }
 
 .button-class {
-  background-color: #ffc659;
+  background-color: #FFC659;
   color: #000;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -43,7 +43,7 @@ h1 {
 .button-class:active,
 .button-class:active {
   background-color: #fff;
-  border: 5px solid #ffc659;
+  border: 5px solid #FFC659;
   color: #000;
 }
 
@@ -57,7 +57,7 @@ h1 {
 
 @media all and (max-width: 768px) {
   .button-class {
-    padding-top: 26px;
-    padding-bottom: 26px;
+      padding-top: 26px;
+      padding-bottom: 26px;
   }
 }
